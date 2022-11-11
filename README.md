@@ -77,7 +77,7 @@ python countMatrix_to_GRN.py \<GRN count matrix file\> \<Gene expression file\> 
 2. Gene expression data file (tab-delimited) with gene ID (1st column) and gene expression value (e.g. FPKM; 2nd column)
 3. Transcription Factor (TF) annotation file with gene ID and name of the motif it can bind to. An annotation file (TF_family_gene_annotation.tsv) is provided with this software.
 
-Annotating a DNaseI/ATAC site to their rightful gene with HiC
+Annotating DNaseI/ATAC sites to their rightful gene with HiC
 ----------
 <p>In order to construct an accurate gene regulatory network we need to be able to associate a cis-regulatory element with the correct gene. Here, we will use promoter-capture HiC from AML patient cells and from healthy CD34+ cells. A set of annotated DNaseI sites are provided for FLT3-ITD, t(8;21), CEBPAx2 and healthy cells are provided in HiC_annoation_data along with a python script <b>annotateBed_with_CHiC.py</b> to help with annotation.</p>
 
