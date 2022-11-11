@@ -27,8 +27,10 @@ python build_gene_regulatory_network.py \<BED file of regulatory elements\> \<Mo
 4. Transcription Factor (TF) annotation file with gene ID and name of the motif it can bind to. An annotation file (TF_family_gene_annotation.tsv) is provided with this software.
 
 ##### Optional Arguments
-<b>-a</b> By default this will build a GRN which only includes transcription factor genes. If you would like to build the full network, which includes all genes, use the <b>-a</b> option<br>
-<b>-f</b> An optional BED file of DNaseI/ATAC-Seq footprints to filter the motif positions against<br>
+<b>-a</b> By default this will build a GRN which only includes transcription factor genes. If you would like to build the full network, which includes all genes, use the <b>-a</b> option
+<br>
+<b>-f</b> An optional BED file of DNaseI/ATAC-Seq footprints to filter the motif positions against
+<br>
 <b>-m</b> Minimium gene expression value for genes to include in the network. Default = 0 (include everything)
 
 ##### Output file
@@ -91,4 +93,5 @@ python annotateBed_with_CHiC.py \<BED file to annotate\> \<CHiC annotation file\
 
 #### Optional arguments
 <b>-g</b> - Genome version to use with Homer. Default = hg38
+<br>
 <b>-d</b> - Maximum distance for closest gene. Genes with distances greater than this value will not be annotated. Default = 200000
