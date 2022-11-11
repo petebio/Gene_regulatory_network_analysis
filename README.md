@@ -2,12 +2,16 @@
 
 <p>Software for the creation and analysis of GRNs</p>
 
-### Required Python packages:
+<p>##### Required Python packages:
 * Numpy
 * pybedtools
 * networkx
 * json
+</p>
 
-### Required software:
+##### Required software:
 * Homer
 * Cytoscape
+
+### Basic usage
+
