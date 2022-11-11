@@ -16,7 +16,7 @@ Software:
 
 Basic Usage
 ----------
-## <b>build_gene_regulatory_network.py</b> - The main script for building a GRN
+### <b>build_gene_regulatory_network.py</b> - The main script for building a GRN
 
 python build_gene_regulatory_network.py \<BED file of regulatiry elements\> \<Motif position directory\> \<Gene expression file\> \<TF annoation file\> \<Output file\>
 
@@ -34,7 +34,7 @@ python build_gene_regulatory_network.py \<BED file of regulatiry elements\> \<Mo
 ##### Output file
 The output file is a Cytoscape JSON file (.cyjs) which can be opened and manipulated in Cytoscape
 
-## <b>findMotifs.py</b> - Find the genomic positions for a set of transcription factor binding motifs
+### <b>findMotifs.py</b> - Find the genomic positions for a set of transcription factor binding motifs
 
 python findMotifs.py \<BED file to use for motif search\> \<Directory of motif PWMs to search for\> \<Genome version (e.g. hg38, mm10)\> \<Output directory\>
 
@@ -45,6 +45,61 @@ python findMotifs.py \<BED file to use for motif search\> \<Directory of motif P
 
 ##### Output
 A directory of BED files containing the aligned motif positions
+
+
+### <b>extract_TF_module_from_GRN.py</b> - Extract a list of nodes connected to a given TF binding motif
+
+python extract_TF_module_from_GRN.py \<GRN in cyjs format\> \<TF motif name\> \<output file\>
+
+##### Required files
+1. A gene regulatory network in cyjs format
+2. The name of the TF motif to extract the module for
+3. Output file
+
+### <b>GRN_to_countMatrix.py</b> - Convert a GRN in cyjs format to a motif count matrix that is more readable to tools such as R and excel
+
+python GRN_to_countMatrix.py \<Cytoscape cyjs file\> \<Output file (.tsv)\>
+
+##### Required files
+1. GRN in cytoscape json (cyjs) format
+2. Output file
+
+The output of this script is a n x m matrix where columns represent TF motifs and rows gene targets. The entry in each row/column represents the number of TF motifs associated with the gene target
+
+### <b>countMatrix_to_GRN.py</b> - Convert a motif count matrix to a GRN cytoscape json (cyjs) file
+
+python countMatrix_to_GRN.py \<GRN count matrix file\> \<Gene expression file\> \<TF motif annotation file\> \<Output file\>
+
+##### Required files
+1. GRN count matrix file
+2. Gene expression data file (tab-delimited) with gene ID (1st column) and gene expression value (e.g. FPKM; 2nd column)
+3. Transcription Factor (TF) annotation file with gene ID and name of the motif it can bind to. An annotation file (TF_family_gene_annotation.tsv) is provided with this software.
+
+Annotating a DNaseI/ATAC site to their rightful gene with HiC
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
