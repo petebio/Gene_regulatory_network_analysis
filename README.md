@@ -79,29 +79,16 @@ Annotating a DNaseI/ATAC site to their rightful gene with HiC
 ----------
 <p>In order to construct an accurate gene regulatory network we need to be able to associate a cis-regulatory element with the correct gene. Here, we will use promoter-capture HiC from AML patient cells and from healthy CD34+ cells. A set of annotated DNaseI sites are provided for FLT3-ITD, t(8;21), CEBPAx2 and healthy cells are provided in HiC_annoation_data along with a python script <b>annotateBed_with_CHiC.py</b> to help with annotation.</p>
 
+<p>This script will read a bed3 file and attempt to map them to their proper target gene using the annotation file provided. If a peak cannot be annotated with HiC, they will then be assigned to their closest gene using the annotatePeaks.pl function in Homer</p>
 
+### Usage
 
+python annotateBed_with_CHiC.py \<BED file to annotate\> \<CHiC annotation file\> \<Output file\>
 
+##### Required files
+1. BED file to annotate
+2. HiC annotation file. Files are provided in HiC_annotation_data/data
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### Optional arguments
+<b>-g</b> - Genome version to use with Homer. Default = hg38
+<b>-d</b> - Maximum distance for closest gene. Genes with distances greater than this value will not be annotated. Default = 200000
