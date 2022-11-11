@@ -28,17 +28,23 @@ python build_gene_regulatory_network.py \<BED file of regulatiry elements\> \<Mo
 
 ##### Optional Arguments
 <b>-a</b> By default this will build a GRN which only includes transcription factor genes. If you would like to build the full network, which includes all genes, use the <b>-a</b> option<br>
-<b>-f</b> An optional BED file of DNaseI/ATAC-Seq footprints to filter the motif positions against
+<b>-f</b> An optional BED file of DNaseI/ATAC-Seq footprints to filter the motif positions against<br>
 <b>-m</b> Minimium gene expression value for genes to include in the network. Default = 0 (include everything)
 
 ##### Output file
 The output file is a Cytoscape JSON file (.cyjs) which can be opened and manipulated in Cytoscape
 
+<b>findMotifs.py</b> - Find the genomic positions for a set of transcription factor binding motifs
 
-Required file formats
-----------
+python findMotifs.py \<BED file to use for motif search\> \<Directory of motif PWMs to search for\> \<Genome version (e.g. hg38, mm10)\> \<Output directory\>
 
-### Gene expression data
-A tab-delimited file with two columns: 1st - gene ID, 2nd - Gene expression value (e.g. FPKM)
+##### Required files
+1. BED file of sites to use for the motif search
+2. A directory of Homer compatible motif probabilty weight matrices files. A set of PWMs used in Assi et al (2019) are provided in motif_PWM_database
+3. Genome version to use with Homer (e.g. hg38, mm10 etc.)
+
+##### Output
+A directory of BED files containing the aligned motif positions
+
 
 
