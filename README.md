@@ -3,7 +3,7 @@
 Software for the creation and analysis of GRNs
 
 Requirements
-==========
+----------
 
 Python packages:
 * Numpy
@@ -16,4 +16,4 @@ Software:
 * Cytoscape
 
 Basic Usage
-==========
+----------
