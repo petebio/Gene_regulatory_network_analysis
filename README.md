@@ -1,18 +1,19 @@
 # Gene regulatory network analysis
 
 Software for the creation and analysis of GRNs
-<br>
 
-##### Required Python packages:
+Requirements
+==========
+
+Python packages:
 * Numpy
-* pybedtools
-* networkx
-* json
+* Pybedtools
+* Networkx
+* Json
 
-
-##### Required software:
+Software:
 * Homer
 * Cytoscape
 
-### Basic usage
-
+Basic Usage
+==========
