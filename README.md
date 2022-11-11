@@ -16,7 +16,7 @@ Software:
 
 Basic Usage
 ----------
-<p><b>build_gene_regulatory_network.py</b> - The main script for building a GRN
+<b>build_gene_regulatory_network.py</b> - The main script for building a GRN
 ##### Required files
 1. A BED file of regulatory elements, such as DNaseI or ATAC-Seq sites that are to be included in the GRN. Sites must be annotated to their associated gene, which should be included as the 4th column in the BED file.
 2. A directory of BED files with the genomic coordinates for each TF motif to be included in the GRN. This can be created using the <b>findMotifs.py</b> script included with this software
@@ -26,7 +26,6 @@ Basic Usage
 ##### Optional Arguments
 <b>-a</b>By default this will build a GRN which only includes transcription factor genes. If you would like to build the full network, which includes all genes, use the <b>-a</b> option
 
-</p>
 
 Required file formats
 ----------
