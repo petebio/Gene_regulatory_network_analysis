@@ -16,7 +16,7 @@ Software:
 
 Basic Usage
 ----------
-<b>build_gene_regulatory_network.py</b> - The main script for building a GRN
+## <b>build_gene_regulatory_network.py</b> - The main script for building a GRN
 
 python build_gene_regulatory_network.py \<BED file of regulatiry elements\> \<Motif position directory\> \<Gene expression file\> \<TF annoation file\> \<Output file\>
 
@@ -34,7 +34,7 @@ python build_gene_regulatory_network.py \<BED file of regulatiry elements\> \<Mo
 ##### Output file
 The output file is a Cytoscape JSON file (.cyjs) which can be opened and manipulated in Cytoscape
 
-<b>findMotifs.py</b> - Find the genomic positions for a set of transcription factor binding motifs
+## <b>findMotifs.py</b> - Find the genomic positions for a set of transcription factor binding motifs
 
 python findMotifs.py \<BED file to use for motif search\> \<Directory of motif PWMs to search for\> \<Genome version (e.g. hg38, mm10)\> \<Output directory\>
 
