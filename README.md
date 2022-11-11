@@ -18,7 +18,7 @@ Basic Usage
 ----------
 ### <b>build_gene_regulatory_network.py</b> - The main script for building a GRN
 
-python build_gene_regulatory_network.py \<BED file of regulatiry elements\> \<Motif position directory\> \<Gene expression file\> \<TF annoation file\> \<Output file\>
+python build_gene_regulatory_network.py \<BED file of regulatory elements\> \<Motif position directory\> \<Gene expression file\> \<TF annoation file\> \<Output file\>
 
 ##### Required files
 1. A BED file of regulatory elements, such as DNaseI or ATAC-Seq sites that are to be included in the GRN. Sites must be annotated to their associated gene, which should be included as the 4th column in the BED file.
@@ -77,6 +77,8 @@ python countMatrix_to_GRN.py \<GRN count matrix file\> \<Gene expression file\> 
 
 Annotating a DNaseI/ATAC site to their rightful gene with HiC
 ----------
+<p>In order to construct an accurate gene regulatory network we need to be able to associate a cis-regulatory element with the correct gene. Here, we will use promoter-capture HiC from AML patient cells and from healthy CD34+ cells. A set of annotated DNaseI sites are provided for FLT3-ITD, t(8;21), CEBPAx2 and healthy cells are provided in HiC_annoation_data along with a python script <b>annotateBed_with_CHiC.py</b> to help with annotation.</p>
+
 
 
 
