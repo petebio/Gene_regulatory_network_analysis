@@ -77,6 +77,7 @@ with open(args.matrix, 'r') as matrix:
 			motifs = columns
 		else:
 			target_node = columns[0]
+			target_node = target_node.replace(' ', '') # Strip tailing whitespace from target node ID
 
 			# Check if gene is expressed and get expression value
 			if target_node in gene_expression:
