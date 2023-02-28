@@ -9,7 +9,7 @@ import os
 
 parser = argparse.ArgumentParser(description = 'Annotate a BED file to an associated gene using CHiC data')
 parser.add_argument('bed', type = str, help = 'BED file to annotate')
-parser.add_argument('chic', type = str, help = 'BED file of CHiC interactions. Target gene should be 6th column')
+parser.add_argument('chic', type = str, help = 'BED file of CHiC interactions. Target gene should be 5th column')
 parser.add_argument('out', type = str, help = 'Output file')
 parser.add_argument('-g', '--genome', dest = 'g', type = str, default = 'hg38', help = 'Genome version to use with Homer (for sites with no CHiC annotation). Default = hg38')
 parser.add_argument('-d', '--dist', dest = 'd', type = int, default = 200000, help = 'Maximum distance between peak and target gene (for sites with no CHiC annotation). Default = 200000')
