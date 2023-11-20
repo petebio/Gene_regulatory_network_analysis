@@ -1,3 +1,5 @@
+[![DOI](https://sandbox.zenodo.org/badge/564330528.svg)](https://sandbox.zenodo.org/doi/10.5072/zenodo.268)
+
 # Gene regulatory network analysis
 
 Software for the creation and analysis of Gene Regulatory Networks (GRNs)
